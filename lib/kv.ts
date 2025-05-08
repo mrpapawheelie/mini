@@ -39,6 +39,7 @@ export async function setUserNotificationDetails(
     await kv.put(
       getUserNotificationDetailsKey(fid),
       JSON.stringify(notificationDetails),
+      { expirationTtl: 60 * 60 * 24 * 30 } // 30 days expiration
     );
   } catch (error) {
     console.error("Error setting notification details in KV:", error);
