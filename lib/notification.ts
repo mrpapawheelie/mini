@@ -5,6 +5,7 @@ import {
   deleteUserNotificationDetails,
 } from "./kv";
 
+export type { FrameNotificationDetails };
 export {
   getUserNotificationDetails,
   setUserNotificationDetails,
